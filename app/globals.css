@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --projectBlack: #171717;
+  --projectWhite: #ffffff;
+  --projectYellow: #ffe600;
+  --projectPurple: #ca44ff;
+  --projectBlue: #27a7fc;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-projectWhite: var(--projectWhite);
+  --color-projectBlack: var(--projectBlack);
+  --color-projectYellow: var(--projectYellow);
+  --color-projectPurple: var(--projectPurple);
+  --color-projectBlue: var(--projectBlue);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.typing-cursor {
+  animation: blink 1s step-end infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--projectBlack);
+  color: var(--projectWhite);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.skills-scroll {
+  overflow-x: scroll;
+  scrollbar-width: auto;
+}
+
+/* Chrome, Safari, and Edge */
+.skills-scroll::-webkit-scrollbar {
+  height: 1px;
+  width: 100px;
+}
+
+.skills-scroll::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--projectBlack) 30%, transparent);
+}
+
+.skills-scroll::-webkit-scrollbar-thumb {
+  background: var(--projectBlack);
+  border-radius: 999px;
+}
+
