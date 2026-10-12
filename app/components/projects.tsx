@@ -127,7 +127,7 @@ const projects: Project[] = [
     gitHubLink: null,
     URL: null,
     period: "Spring 2024",
-    imageURL: ["/Bookhub.png"],
+    imageURL: ["/BookHub.png"],
   },
 ];
 
