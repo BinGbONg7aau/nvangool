@@ -84,7 +84,7 @@ const projects: Project[] = [
     category: "Bachelor's Thesis",
     description:
       "A research project in classical AI planning. Implemented h¹ and h² with a priority-queue design and two optimisations for h². Benchmarked against LM-cut on IPC domains using an HPC cluster.",
-    tech: ["C", "PDDL", "GMake", "A* search", "Downward Lab", "Slurm"],
+    tech: ["C", "PDDL", "MakeFile", "A* search", "Downward Lab", "Slurm"],
     gitHubLink: "https://github.com/P6-2CANE/CPDDL-mirror",
     URL: null,
     period: "Spring 2026",
