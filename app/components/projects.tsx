@@ -77,7 +77,7 @@ const projects: Project[] = [
     gitHubLink: null,
     URL: "https://vg-geoconsult.dk/home",
     period: "Autumn 2026",
-    imageURL: ["/VGGeoconsult1.png"],
+    imageURL: ["/VGGeoconsult.png"],
   },
   {
     name: "Critical Path Heuristic h²",
@@ -107,7 +107,7 @@ const projects: Project[] = [
     gitHubLink: "https://github.com/Group-CAFNE/Neptune",
     URL: null,
     period: "Spring 2025",
-    imageURL: ["/Neptune1.png"],
+    imageURL: ["/Neptune.png"],
   },
   {
     name: "Bookhub",
