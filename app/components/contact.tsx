@@ -62,7 +62,7 @@ export default function Contact() {
                 key={contact.label}
                 type="button"
                 onClick={() => copyToClipboard(contact.value, contact.label)}
-                className={`group flex w-4/5 lg:w-1/2 items-center p-6 text-left transition-opacity hover:opacity-80 cursor-pointer gap-2 ${
+                className={`group flex items-center justify-start text-center w-4/5 lg:w-2/3 lg:pl-6 py-6 transition-opacity hover:opacity-80 cursor-pointer gap-2 ${
                   index < contactDetails.length - 1 ? "border-b" : ""
                 }`}
               >

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const lines = [
     "Software Developer",
-    "BSc in Software · Aalborg University",
+    "BSc in Software",
   ];
 
 export default function Header() {
@@ -45,19 +45,17 @@ export default function Header() {
   }, [lineIndex, displayedText, stage, finished,]);
 
   return (
-    <div className="flex w-full flex-col lg:flex-row border-b bg-gradient-to-l from-projectYellow/50 p-4 gap-8">
+    <div className="flex w-full flex-col lg:flex-row border-b bg-gradient-to-l from-projectYellow/40 p-4 gap-8 transition-colors">
       <p className="flex min-h-100 lg:w-1/2 flex-col justify-center lg:text-end text-8xl font-bold">
         Nikolaj Krog van Gool
       </p>
 
-      <div className={`flex flex-col justify-center text-2xl ${finished ? "text-projectYellow" : "font-mono"}`}>
+      <div className="flex flex-col justify-center text-2xl font-mono">
         {lines.map((line, i) => (
           <div key={i}>
             {i <= lineIndex && (
               <>
-                {!finished && (
-                  <span className="text-projectYellow">{"<p>"}</span>
-                )}
+                <span className="text-projectYellow">{"<p>"}</span>
 
                 {i === lineIndex ? displayedText : line}
 
@@ -65,9 +63,9 @@ export default function Header() {
                   <span className="animate-pulse">|</span>
                 )}
 
-                {!finished && (
+                
                   <span className="text-projectYellow">{"</p>"}</span>
-                )}
+                
               </>
             )}
           </div>

@@ -115,7 +115,7 @@ export default function TechnicalSkills() {
                 {category.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="p-1 rounded bg-projectYellow text-projectBlack font-bold"
+                    className="p-1 grow text-center rounded bg-projectYellow text-projectBlack font-bold"
                   >
                     {tech}
                   </span>

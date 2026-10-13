@@ -22,7 +22,7 @@ const projects: Project[] = [
     category: "Professional Experience",
     description:
       "Sole developer for six months on the web shop of a Copenhagen food company. Maintained the existing codebase, handled version upgrades and compatibility fixes, fixed bugs, and developed new features for a live product with real customers.",
-    tech: ["AngularJS", "JavaScript", "PHP", "PHPMailer", "MySQL"],
+    tech: ["AngularJS", "JavaScript", "PHP", "PHPMailer", "MySQL", "Bootstrap"],
     gitHubLink: null,
     URL: "https://madvognen.dk/#/start",
     period: "Oct 2025 - Mar 2026",
@@ -32,7 +32,7 @@ const projects: Project[] = [
     name: "Educado",
     category: "Academic Project",
     description:
-      "A learning platform for Brazilian waste pickers, part of the Erasmus+ Egalitarian initiative. Worked in an 8-team Scrum of Scrums setup to modernise the platform: migrated the backend, moved the codebase to TypeScript, and set up CI/CD and code-quality tooling.",
+      "A learning platform for Brazilian waste pickers, part of the Erasmus+ Egalitarian initiative. Worked in an 8-team Scrum of Scrums setup to modernise the platform: migrated the backend, moved the codebase to TypeScript, and set up CI/CD.",
     tech: [
       "React Native",
       "Expo",
@@ -49,7 +49,7 @@ const projects: Project[] = [
     imageURL: ["/Educado1.png", "/Educado2.png"],
   },
   {
-    name: "Webshop & CMS for Vindmeddans",
+    name: "Webshop & CMS for VMD",
     category: "Academic Project",
     description:
       "A full-stack web shop for a fruit wine company, built with object-oriented analysis and design. It includes online payments, MitID age verification, cookie handling and a responsive UI. Tested with unit tests, API tests and usability tests.",
@@ -60,7 +60,6 @@ const projects: Project[] = [
       "React",
       "Hibernate",
       "JPA",
-      "Bootstrap",
       "JUnit",
       "Gradle",
     ],
@@ -73,7 +72,7 @@ const projects: Project[] = [
     name: "VG-Geoconsult.dk",
     category: "Hobby Project",
     description:
-      "Developed a portfolio and consulting website for an independent geologist working in mineral exploration. Built a responsive Next.js site with a client showcase. Implemented a secure admin area where the owner can add, edit and delete content.",
+      "Developed a portfolio and consulting website for an independent geologist working in mineral exploration. Implemented a secure admin area where the owner can add, edit and delete content.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Neon Postgres", "Vercel"],
     gitHubLink: null,
     URL: "https://vg-geoconsult.dk/home",
@@ -84,7 +83,7 @@ const projects: Project[] = [
     name: "Critical Path Heuristic h²",
     category: "Bachelor's Thesis",
     description:
-      "A research project in classical AI planning. Implemented h¹ and h² with a priority-queue design and two optimisations for h². Benchmarked against h^LM-cut on IPC domains using an HPC cluster.",
+      "A research project in classical AI planning. Implemented h¹ and h² with a priority-queue design and two optimisations for h². Benchmarked against LM-cut on IPC domains using an HPC cluster.",
     tech: ["C", "PDDL", "GMake", "A* search", "Downward Lab", "Slurm"],
     gitHubLink: "https://github.com/P6-2CANE/CPDDL-mirror",
     URL: null,
@@ -159,14 +158,14 @@ export default function Projects() {
               className="flex flex-col border shrink-0 w-9/10 lg:w-2/7 justify-between text-md"
             >
               <div className="p-4">
-                <div className="flex flex-row justify-between mb-4 min-h-15">
-                  <p className="w-1/2 self-center font-bold text-2xl">{project.name}</p>
-                  <div className="text-end w-1/2 self-center opacity-80 text-sm">
+                <div className="flex flex-row justify-between mb-4 min-h-18">
+                  <p className="w-1/2 font-bold text-2xl">{project.name}</p>
+                  <div className="text-end w-1/2 opacity-80 text-sm">
                     <p>{project.category}</p>
                     <p>{project.period}</p>
                   </div>
                 </div>
-                <div>{project.description}</div>
+                <div className="min-h-40">{project.description}</div>
                 <div className="w-fit mx-auto justify-start">
                   {project.gitHubLink !== null ? (
                     <a
@@ -175,7 +174,6 @@ export default function Projects() {
                       rel="noopener noreferrer"
                     >
                       <div className="flex flex-row gap-1 hover:text-projectYellow transition-colors m-4">
-                        GitHub
                         <Icon.GitHub />
                       </div>
                     </a>
@@ -189,7 +187,6 @@ export default function Projects() {
                       rel="noopener noreferrer"
                     >
                       <div className="flex flex-row gap-1 hover:text-projectYellow transition-colors m-4">
-                        Link
                         <Icon.ExternalLink />
                       </div>
                     </a>
@@ -221,7 +218,7 @@ export default function Projects() {
                   {project.tech.map((tech) => (
                     <div
                       key={tech}
-                      className="p-1 rounded bg-projectYellow font-bold text-projectBlack"
+                      className="grow text-center p-1 rounded bg-projectYellow font-bold text-projectBlack"
                     >
                       {tech}
                     </div>
